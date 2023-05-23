@@ -1,6 +1,6 @@
 
 module.exports = {
     images: {
-        domains: ['images.ctfassets.net', 'images.unsplash.com','fakestoreapi.com'],
+        domains: ['links.papareact.com','images.ctfassets.net', 'images.unsplash.com','fakestoreapi.com'],
     },
 };
