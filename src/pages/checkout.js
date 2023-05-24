@@ -4,7 +4,6 @@ import { selectItems, selectTotal } from '../slices/basketSlice'
 import { useSelector } from 'react-redux'
 import CheckoutProduct from '../components/CheckoutProduct'
 import { useSession } from 'next-auth/react'
-// import { selectTotal } from '../slices/basketSlice'
 
 
 import { Currency } from 'react-currency-formatter'
@@ -55,7 +54,11 @@ function Checkout() {
                                 <h2 className='whitespace-nowrap'>
                                     Subtotal ({items.length} items):
                                     <span className='font-bold'>
-                                        {/* <Currency quantity={100} currency="INR" /> */}
+
+                                        <p>
+                                            ₹ {total}
+                                        </p>
+                                        
                                     </span>
                                 </h2>
                                 <button
