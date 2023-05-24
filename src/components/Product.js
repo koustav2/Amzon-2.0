@@ -4,11 +4,26 @@ import { StarIcon } from '@heroicons/react/solid'
 import { useState, useEffect } from 'react'
 
 import Currency from 'react-currency-formatter'
+import { useDispatch } from 'react-redux'
+import { addToBasket } from '../slices/basketSlice'
 
 function Product({ id, title, price, description, category, image }) {
     const [rating, setRating] = useState(1);
 
     const [hasPrime, setHasPrime] = useState(true);
+    const diaptch = useDispatch();
+
+    const addItemToBasket = () => {
+        const product = {
+            id, title, 
+            price, description, 
+            category, image, 
+            rating, hasPrime
+        };
+        // Sending the product as an action to the REDUX store... the basket slice
+        diaptch(addToBasket(product));
+    };
+    
 
     useEffect(() => {
         setRating(
@@ -47,7 +62,9 @@ function Product({ id, title, price, description, category, image }) {
                 </div>
             )}
 
-            <button className='mt-auto button'>Add to Basket</button>
+            <button 
+                onClick={addItemToBasket}
+            className='mt-auto button'>Add to Basket</button>
 
         </div>
     )
