@@ -28,7 +28,9 @@ export const authOptions = {
     // adapter: TypeORMLegacyAdapter({
     //     synchronize: false
     //   }),
-    secret: process.env.SECRET,
+    secret: '79d48d770d3650473763608f168f4253',
+    // A database is optional, but required to persist accounts in a database
+    // database: process.env.DATABASE_URL,
 
 }
 
