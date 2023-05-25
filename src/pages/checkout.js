@@ -77,7 +77,7 @@ function Checkout() {
                                     <span className='font-bold'>
 
                                         <p>
-                                            ₹ {total}
+                                            ₹ {total.toFixed(2)}
                                         </p>
 
                                     </span>
