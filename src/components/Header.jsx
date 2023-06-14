@@ -23,7 +23,7 @@ function Header() {
                 <div className="mt-2 flex items-center flex-grow sm:flex-grow-0">
                     <Image
                         onClick={() => router.push("/")}
-                        src="https://links.papareact.com/f90"
+                        src="https://www.freepnglogos.com/uploads/amazon-png-logo-vector/woodland-gardening-amazon-png-logo-vector-8.png"
                         width={150}
                         height={40}
                         alt="logo"
